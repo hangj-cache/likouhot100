@@ -1,4 +1,4 @@
-package com.Hang.difficult;
+package com.Hang.hard;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;
