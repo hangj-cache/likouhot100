@@ -46,5 +46,10 @@ public class GetIntersectionNode {
         sc.nextLine();
         String strB = sc.nextLine();
 
+        String[] strAs = strA.substring(1,strA.length()-1).split(",\\s*");
+        String[] strBs = strB.substring(1,strB.length()-1).split(",\\s*");
+        int[] numsA = new int[strAs.length];
+        int[] numsB = new int[strBs.length];
+
     }
 }
