@@ -36,6 +36,7 @@ public class GetIntersectionNode {
             if(set.contains(pb)){
                 return pb;
             }
+            pb = pb.next;
         }
         return null;
     }
