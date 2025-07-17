@@ -59,7 +59,14 @@ public class CompletableFuture_test {
         TimeUnit.SECONDS.sleep(5);
 
         System.out.println("主线程：等待所有异步处理完成，以确保程序退出前任务都已执行。");
-        allTasks.get();  // 因为allTasks就是CompletableFuture<Void> allTasks = CompletableFuture.allOf(deductStockFuture, sendEmailFuture);即使剩下的所有异步任务
+        allTasks.get();  // 因为allTasks就是CompletableFuture<Void> allTasks = CompletableFuture.allOf(deductStockFuture, sendEmailFuture);
+        // 因此allTasks就是剩下的所有异步任务，.get()就是这些剩下的异步任务全部完成
+        /*
+        详细解释：
+        get() 方法是一个阻塞操作。当主线程执行到 allTasks.get() 时，它会暂停（阻塞）自身的执行，直到 allTasks 所代表的所有异步任务都成功完成或者其中任何一个任务抛出异常。
+        一旦 allTasks 完成，get() 方法就会立即返回（对于 allOf 而言，它返回 null，因为 allOf 组合的是没有返回值的 Void 类型 Future）。
+         */
+
 
         // 关闭自定义的线程池
         executor.shutdown();
