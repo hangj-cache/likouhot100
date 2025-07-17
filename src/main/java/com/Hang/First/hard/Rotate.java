@@ -1,4 +1,4 @@
-package com.Hang.hard;
+package com.Hang.First.hard;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.Hang;
+package com.Hang.First.easy;
 
 import java.util.HashSet;
 import java.util.Scanner;

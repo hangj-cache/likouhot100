@@ -1,7 +1,6 @@
-package com.Hang;
+package com.Hang.First.easy;
 
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
