@@ -38,11 +38,11 @@ public class IsPalindrome_234 {
             mh = mh.next;
         }
         Node node = reverseList(mh2);
-        Node n = head;
-        while(n.next != node){
-            n = n.next;
-        }
-        n.next = node;
+//        Node n = head;  // 这后面不需要了因为一开始反转的反转的时候前半段一直是指向后半段的开头的，没断过
+//        while(n.next != node){
+//            n = n.next;
+//        }
+//        n.next = node;
         return flag;
     }
 
